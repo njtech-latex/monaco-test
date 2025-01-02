@@ -1,9 +1,10 @@
+import { defaultVsPaths } from "@/data/paths";
+
 export default class VsPath {
   private storageKey = "vsPath" as const;
-  private defaultPath = "https://www.keepresearch.com/blob/npm/monaco-editor/min/vs" as const;
 
   get path() {
-    return localStorage.getItem(this.storageKey) || this.defaultPath;
+    return localStorage.getItem(this.storageKey) || defaultVsPaths[0].value;
   }
 
   set path(path: string) {
