@@ -56,6 +56,9 @@ export default function App() {
         value={content[lang]}
         onChange={handleContentChange}
         className={style.editor}
+        options={{
+          renderWhitespace: "all"
+        }}
       />
     </div>
   );
